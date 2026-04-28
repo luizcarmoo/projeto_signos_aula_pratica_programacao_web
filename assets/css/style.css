@@ -1,0 +1,191 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO */
+
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+}
+
+body {
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(10,10,30,0.75), rgba(10,10,30,0.95)),
+        url('../images/bg.jpg'); /* ajuste aqui se necessário */
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ZODIAC IMAGE */
+.zodiac-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.zodiac-image img {
+    width: 140px;          /* controla o tamanho */
+    height: 140px;
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    /* efeito leve pra combinar com o glass */
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+
+    transition: 0.4s;
+}
+
+/* efeito ao passar o mouse */
+.zodiac-image img:hover {
+    transform: scale(1.08) rotate(5deg);
+}
+
+/* CENTRALIZAÇÃO */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD DE VIDRO (GLASS REAL) */
+.card-custom {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    background: rgba(241, 241, 241, 0.021);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 8px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 5px rgba(167, 167, 167, 0.11);
+
+    text-align: center;
+
+    transition: 0.3s;
+    animation: fadeInUp 0.6s ease;
+}
+
+/* HOVER */
+.card-custom:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow:
+        0 12px 50px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(34, 0, 128, 0.315);
+}
+
+/* TÍTULO */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 0.2rem;
+    background: linear-gradient(90deg, #ffffff, #0eb2db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* TEXTO */
+.subtitle {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+    margin-bottom: 20px;
+}
+
+.result-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.mt-14 {
+    font-size: 1rem;
+    color: #ffffffb2;
+}
+
+/* INPUT */
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.295);
+
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-primary {
+    width: 100%;
+    border: none;
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, #3cd1ff, #0077ff);
+
+    color: #ffffff;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    color: #ffebc1;
+}
+
+/* BOTÃO VOLTAR */
+.btn-secondary {
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 10px;
+
+    background: rgba(255,255,255,0.2);
+    border: none;
+
+    backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
