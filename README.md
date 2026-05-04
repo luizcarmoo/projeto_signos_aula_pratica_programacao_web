@@ -83,7 +83,6 @@ Além do básico solicitado, foram adicionadas melhorias visuais:
 * 💎 Efeito **Glassmorphism (cartão de vidro)**
 * 🌌 Fundo com gradiente moderno
 * 🌠 Partículas animadas (estrelas)
-* 🔗 Efeito de **constelação (linhas entre partículas)**
 * 🎨 Botões com gradiente e animação
 * 🖼 Imagem temática do zodíaco
 * 📱 Layout responsivo e centralizado
